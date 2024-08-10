@@ -1,0 +1,196 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #navbar {
+    background-color: #efefef;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+  }
+  
+  #navbar button {
+    float: left;
+    display: flex;
+    text-align: center;
+    line-height: 40px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    height: 70px;
+  }
+  
+  .btn{
+    color: #333333;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+
+  button {
+    border: none;
+  }
+
+  .active, .btn:hover {
+    color: #FF6700;
+  }
+
+  #navbar #menu {
+    float: right;
+  }
+
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/book.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /*parallax*/
+    position: relative;
+    margin: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .hero-text h1 {
+    margin: 0;
+  }
+
+  .hero-text p {
+    margin: 0;
+  }
+
+/* .box{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;  
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 4px rgba(112, 112, 112, 0.3);
+}
+
+.box img {
+    width: 50%;
+} */
+
+/* ========== MAIN CONTENT CONTAINERS ========= 
+/* Desktops */
+/* @media (min-width:768px) { .blog { padding: 4% 8% } } */
+
+/* Mobiles */
+/* @media (max-width:767px) { .blog { padding: 11% 8% } } */
+
+/* Desktops: flexbox child columns */
+/* @media (min-width:768px) {
+    .item-col-4 { width: 22% }
+} */
+
+/* .blog {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+} */
+
+.flex-container {
+    padding: 0;
+    margin: 2em auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .flex-item p {
+    margin: 0.5em;
+    font-size: 1em;
+  }
+  .flex-item img {
+    width: 100%;
+  }
+  .flex-item {
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 0.5em;
+    flex: 1 1 auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 4px rgba(112, 112, 112, 0.3);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (min-width: 320px) {
+     width: 100vw;
+    }
+    
+    @media screen and (min-width: 640px) {
+     width: calc(50vw - 4em);
+    }
+  
+    @media screen and (min-width: 960px) {
+     width: calc(25vw - 4em);
+      
+      &:first-child {
+        /* //margin-left: auto; */
+      }
+      
+      &:last-child {
+        /* //margin-right: auto; */
+      }
+    }
+   
+    @media screen and (min-width: 1280px) {
+      
+    }
+  }
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding-top: 30px;
+}
+
+.controls select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 50px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #ffc096;
+}
